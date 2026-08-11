@@ -3,23 +3,37 @@ class GameOverScreen extends BaseScreen {
     super(game, 'gameover');
   }
 
-  build() {
+  build(options = {}) {
     this.el = document.createElement('div');
     this.el.className = 'screen gameover-screen';
     this.el.style.backgroundImage = `url("${this.game.config.backgrounds.menu}")`;
 
     const panel = new Panel({ image: 'assets/ui/f.png' });
-    panel.add(
-      this.titleEl('GAME OVER'),
+    const children = [this.titleEl('GAME OVER')];
+    if (options.stars != null) children.push(this.starsEl(options.stars));
+    children.push(
       this.buttonEl('RETRY', 'primary', () => this.retry()),
       this.buttonEl('REVIVE', 'secondary', () => this.revive()),
       this.buttonEl('MENU', 'back', () => this.menu())
     );
+    panel.add(...children);
     this.el.appendChild(panel.el);
 
     this.onKeyDown((event) => {
       if (event.code === 'Enter' || event.code === 'Space') this.retry();
     });
+  }
+
+  starsEl(count) {
+    const row = document.createElement('div');
+    row.className = 'modal-stars';
+    for (let i = 0; i < 3; i += 1) {
+      const img = document.createElement('img');
+      img.src = i < count ? 'assets/ui/s1.png' : 'assets/ui/s2.png';
+      img.alt = '';
+      row.appendChild(img);
+    }
+    return row;
   }
 
   titleEl(text) {

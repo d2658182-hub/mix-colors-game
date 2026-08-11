@@ -4,6 +4,7 @@
    What the agent customizes for EACH game :
      - id, first screen, play target
      - title
+     - loading screen (assets to preload)
      - backgrounds (menu + gameplay)
      - optional features (shop)
      - shop items
@@ -16,11 +17,19 @@
 
 const GAME_CONFIG = {
   id: 'mon-jeu',
-  firstScreen: 'menu',
+  firstScreen: 'loading',
   playTarget: 'gameplay',
 
   /* ----- CUSTOMIZE: game identity ----- */
   title: 'MY GAME',
+
+  /* ----- CUSTOMIZE: loading screen ----- */
+  /* List here EVERY image the game uses (sprites, FX, extra backgrounds)
+     so the loading bar fills with real progress. */
+  loading: {
+    loadTarget: 'menu',
+    assets: []
+  },
 
   /* ----- CUSTOMIZE: backgrounds ----- */
   /* Replace the PNG files in assets/screens/ */

@@ -116,7 +116,7 @@ class GameplayScreen extends BaseScreen {
     container.innerHTML = '';
     for (let i = 0; i < this.game.config.hud.hearts; i += 1) {
       const img = document.createElement('img');
-      img.src = i < this.hearts ? 'assets/ui/s1.png' : 'assets/ui/s2.png';
+      img.src = i < this.hearts ? 'assets/ui/l1.png' : 'assets/ui/l2.png';
       img.alt = '';
       container.appendChild(img);
     }

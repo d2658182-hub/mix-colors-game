@@ -1,5 +1,6 @@
 const game = new Game(GAME_CONFIG);
 game
+  .register(new LoadingScreen(game))
   .register(new MenuScreen(game))
   .register(new GameplayScreen(game))
   .register(new PauseScreen(game))
