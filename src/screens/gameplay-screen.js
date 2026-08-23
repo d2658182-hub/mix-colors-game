@@ -26,8 +26,7 @@ class GameplayScreen extends BaseScreen {
       ${this.scoreElement()}
       ${this.heartsElement()}
       <button type="button" class="btn btn-square btn-pause" aria-label="Pause">
-        <img src="assets/ui/b_8.png" alt="" draggable="false">
-        <span class="btn-icon">⏸</span>
+        <img src="assets/ui/icon_pause.png" alt="" draggable="false">
       </button>
     `;
 

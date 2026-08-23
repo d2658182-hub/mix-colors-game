@@ -16,19 +16,19 @@
    ============================================================ */
 
 const GAME_CONFIG = {
-  id: 'mon-jeu',
+  id: 'mix-colors',
   firstScreen: 'loading',
   playTarget: 'gameplay',
 
   /* ----- CUSTOMIZE: game identity ----- */
-  title: 'MY GAME',
+  title: 'MIX COLORS',
 
   /* ----- CUSTOMIZE: loading screen ----- */
   /* List here EVERY image the game uses (sprites, FX, extra backgrounds)
      so the loading bar fills with real progress. */
   loading: {
     loadTarget: 'menu',
-    assets: []
+    assets: ['assets/ui/field.png', 'assets/ui/pr_ui_gold.png', 'assets/ui/icon_pause.png', 'assets/ui/icon_sound_on.png', 'assets/ui/icon_sound_off.png']
   },
 
   /* ----- CUSTOMIZE: backgrounds ----- */

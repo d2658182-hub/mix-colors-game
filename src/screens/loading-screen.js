@@ -6,7 +6,7 @@ const PACK_IMAGES = [
   'b_1.png', 'b_2.png', 'b_3.png', 'b_4.png', 'b_5.png',
   'b_6.png', 'b_7.png', 'b_8.png', 'bar_1.png', 'bar_2.png',
   'c.png', 'f.png', 'field.png', 'l1.png', 'l2.png',
-  'pr_ui_gold.png', 's1.png', 's2.png'
+  'pr_ui_gold.png', 's1.png', 's2.png', 'icon_pause.png', 'icon_sound_on.png', 'icon_sound_off.png'
 ];
 
 class LoadingScreen extends BaseScreen {

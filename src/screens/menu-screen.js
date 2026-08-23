@@ -54,8 +54,7 @@ class MenuScreen extends BaseScreen {
     const on = this.game.audio.settings.sound;
     return `
       <button type="button" class="btn btn-square btn-sound" aria-label="Sound">
-        <img src="assets/ui/b_8.png" alt="" draggable="false">
-        <span class="btn-icon">${on ? '🔊' : '🔇'}</span>
+        <img src="${on ? 'assets/ui/icon_sound_on.png' : 'assets/ui/icon_sound_off.png'}" alt="" draggable="false" class="btn-icon-img">
       </button>
     `;
   }
@@ -74,6 +73,7 @@ class MenuScreen extends BaseScreen {
     event.stopPropagation();
     this.game.audio.click();
     const on = this.game.audio.toggleSound();
-    event.currentTarget.querySelector('.btn-icon').textContent = on ? '🔊' : '🔇';
+    const img = event.currentTarget.querySelector('.btn-icon-img');
+    if (img) img.src = on ? 'assets/ui/icon_sound_on.png' : 'assets/ui/icon_sound_off.png';
   }
 }
