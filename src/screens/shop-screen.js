@@ -44,7 +44,10 @@ class ShopScreen extends BaseScreen {
     items.forEach((item) => {
       const row = document.createElement('div');
       row.className = 'shop-item';
+      // SHOP ITEMS VISUAL ASSETS: image is mandatory, not text-only (skill PHASE 3B)
+      const itemIcon = item.image ? `<img src="${item.image}" alt="" draggable="false" class="shop-item-icon">` : '';
       row.innerHTML = `
+        ${itemIcon}
         <span class="shop-item-name">${item.name}</span>
         <span class="shop-item-price"><img src="assets/ui/c.png" alt="" draggable="false">${item.price.toLocaleString('fr-FR')}</span>
       `;

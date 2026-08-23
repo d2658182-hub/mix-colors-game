@@ -28,7 +28,7 @@ const GAME_CONFIG = {
      so the loading bar fills with real progress. */
   loading: {
     loadTarget: 'menu',
-    assets: ['assets/ui/field.png', 'assets/ui/pr_ui_gold.png', 'assets/ui/icon_pause.png', 'assets/ui/icon_sound_on.png', 'assets/ui/icon_sound_off.png']
+    assets: ['assets/ui/field.png', 'assets/ui/pr_ui_gold.png', 'assets/ui/icon_pause.png', 'assets/ui/icon_sound_on.png', 'assets/ui/icon_sound_off.png', 'assets/ui/l1.png', 'assets/ui/c.png']
   },
 
   /* ----- CUSTOMIZE: backgrounds ----- */
@@ -45,10 +45,11 @@ const GAME_CONFIG = {
   },
 
   /* ----- CUSTOMIZE: shop items ----- */
+  /* SHOP ITEMS MUST BE VISUAL ASSETS: each item has an image pointing to assets/ui/ real file */
   shop: {
     items: [
-      { id: 'extra_heart', name: 'Heart +1', price: 100 },
-      { id: 'double_points', name: 'Double Points', price: 200 }
+      { id: 'extra_heart', name: 'Palette +1', price: 100, image: 'assets/ui/l1.png' },
+      { id: 'double_points', name: 'Gold Mix x2', price: 200, image: 'assets/ui/pr_ui_gold.png' }
     ]
   },
 
